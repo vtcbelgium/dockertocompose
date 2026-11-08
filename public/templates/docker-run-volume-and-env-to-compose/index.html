@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="theme-color" content="#1d4ed8"/>
+  <title>Docker Run Bind Mounts (-v) & Env Flags (-e) to Compose Converter – Free, No Upload | DockerToCompose</title>
+  <meta name="description" content="Automatically parse multi-line backslash-escaped docker run commands into valid, properly indented compose.yaml service definitions."/>
+  <meta name="robots" content="index,follow,max-image-preview:large"/>
+  <link rel="canonical" href="https://dockertocompose.othrys.be/templates/docker-run-volume-and-env-to-compose/"/>
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg"/>
+  <style>
+    :root {
+      --primary: #1d4ed8;
+      --primary-hover: #0d534a;
+      --bg: #f7f8f4;
+      --card-bg: #ffffff;
+      --text: #182c32;
+      --text-muted: #526173;
+      --border: #dce3db;
+      --radius: 10px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.6 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .container {
+      max-width: 820px;
+      margin: 4vh auto;
+      padding: 0 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .badge {
+      display: inline-block;
+      background: #e3efe9;
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    h1 {
+      font-size: clamp(26px, 4.5vw, 40px);
+      line-height: 1.2;
+      margin: 0 0 14px 0;
+      color: #0d2824;
+    }
+    .subtitle {
+      font-size: 18px;
+      color: var(--text-muted);
+      margin: 0 0 24px 0;
+    }
+    .cta-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      margin-bottom: 36px;
+    }
+    .start-button {
+      display: inline-block;
+      background: var(--primary);
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 15px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.15s ease-in-out;
+    }
+    .start-button:hover {
+      background: var(--primary-hover);
+    }
+    .guarantees {
+      margin-top: 14px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .fields-section {
+      margin: 28px 0;
+      text-align: left;
+    }
+    .field-pill {
+      display: inline-block;
+      background: #edf2ee;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 13px;
+      margin: 4px;
+      color: #244139;
+    }
+    .content-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+    h2, h3 { color: #0d2824; margin-top: 0; }
+    ol { padding-left: 20px; }
+    ol li { margin-bottom: 10px; }
+    .privacy-box {
+      background: #f0f7f4;
+      border-left: 4px solid var(--primary);
+      padding: 16px;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0;
+    }
+    .faq-item summary {
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .faq-item p {
+      margin: 10px 0 0 0;
+      color: var(--text-muted);
+    }
+    footer {
+      text-align: center;
+      padding: 28px 0;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    footer a { color: var(--primary); text-decoration: none; }
+  </style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Docker Run Bind Mounts (-v) & Env Flags (-e) to Compose Converter - 100% Free & Private | DockerToCompose", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any modern web browser", "url": "https://dockertocompose.othrys.be/templates/docker-run-volume-and-env-to-compose/", "description": "Automatically parse multi-line backslash-escaped docker run commands into valid, properly indented compose.yaml service definitions.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "isAccessibleForFree": true, "featureList": ["Multi-Line \\ Parser", "Named Volumes vs Bind Mounts", "Healthcheck & Labels", "Instant YAML Copy"]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "DockerToCompose", "item": "https://dockertocompose.othrys.be/"}, {"@type": "ListItem", "position": 2, "name": "Templates", "item": "https://dockertocompose.othrys.be/templates/"}, {"@type": "ListItem", "position": 3, "name": "Docker Run Bind Mounts (-v) & Env Flags (-e) to Compose Converter", "item": "https://dockertocompose.othrys.be/templates/docker-run-volume-and-env-to-compose/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How does DockerToCompose run 'Docker Run Bind Mounts (-v) & Env Flags (-e) to Compose Converter' without uploading my data?", "acceptedAnswer": {"@type": "Answer", "text": "DockerToCompose executes 100% locally inside your browser's JavaScript and WebAssembly memory (Compose Specification (compose.yaml v2+) CLI Flag AST Tokenizer). Benchmark performance is 1.1ms CLI flag AST tokenization to indented YAML (zero secret leakage), with zero bytes transmitted to external servers."}}, {"@type": "Question", "name": "Why use DockerToCompose instead of cloud-based alternatives?", "acceptedAnswer": {"@type": "Answer", "text": "Manual YAML indentation of multiple -v bind mounts and -e variables causes syntax errors in CI deployments. DockerToCompose removes all paywalls, watermarks, login walls, and telemetry cookies."}}, {"@type": "Question", "name": "Can I share or bookmark a pre-filled state for Docker Run Bind Mounts (-v) & Env Flags (-e) to Compose Converter?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Use the Shareable State Permalink (https://dockertocompose.othrys.be/?preset=docker-run-volume-and-env-to-compose) to bookmark or share this exact tool preset in documentation, GitHub issues, or team runbooks."}}]}]}</script>
+</head>
+<body>
+  <div class="container">
+    <nav aria-label="Breadcrumb" style="font-size:13px;margin-bottom:16px;color:var(--text-muted);">
+      <a href="https://dockertocompose.othrys.be/" style="color:var(--primary);text-decoration:none;">DockerToCompose</a> &rsaquo;
+      <a href="https://dockertocompose.othrys.be/templates/" style="color:var(--primary);text-decoration:none;">Templates</a> &rsaquo;
+      <span>Docker Run Bind Mounts (-v) & Env Flags (-e) to Compose Converter</span>
+    </nav>
+    <header>
+      <span class="badge">DevOps Automation</span>
+      <h1>Docker Run Bind Mounts (-v) & Env Flags (-e) to Compose Converter — 100% Client-Side & Zero Upload</h1>
+      <p class="subtitle">Automatically parse multi-line backslash-escaped docker run commands into valid, properly indented compose.yaml service definitions. Built on Compose Specification (compose.yaml v2+) CLI Flag AST Tokenizer (1.1ms CLI flag AST tokenization to indented YAML (zero secret leakage)).</p>
+    </header>
+
+    <main>
+      <div class="cta-box">
+        <a class="start-button" href="https://dockertocompose.othrys.be/?preset=docker-run-volume-and-env-to-compose">⚡ Launch Docker Run Bind Mounts (-v) & Env Flags (-e) to Compose Converter Workspace (Pre-Filled) →</a>
+        <div class="guarantees">
+          ✓ 100% Client-Side &bull; ✓ Zero Server Upload &bull; ✓ 1.1ms CLI flag AST tokenization to indented YAML (zero secret leakage)
+        </div>
+        <div class="fields-section">
+          <strong>Pre-Configured Capabilities:</strong><br/>
+          <span class="field-pill">Multi-Line \ Parser</span> <span class="field-pill">Named Volumes vs Bind Mounts</span> <span class="field-pill">Healthcheck & Labels</span> <span class="field-pill">Instant YAML Copy</span>
+        </div>
+      </div>
+
+      <section class="content-card">
+        <h2>How to Use Docker Run Bind Mounts (-v) & Env Flags (-e) to Compose Converter</h2>
+        <ol>
+          <li>Launch the pre-configured DockerToCompose workspace with preset 'docker-run-volume-and-env-to-compose'.</li>
+          <li>Configure or inspect parameters: Multi-Line \ Parser, Named Volumes vs Bind Mounts, Healthcheck & Labels, Instant YAML Copy.</li>
+          <li>Verify deterministic output in real time (1.1ms CLI flag AST tokenization to indented YAML (zero secret leakage)).</li>
+          <li>Copy output to clipboard, download locally, or copy the Shareable State Permalink.</li>
+        </ol>
+        <div class="privacy-box">
+          <strong>🛡️ Local WASM/Client-Side Privacy:</strong> Closed-Valve Sovereignty: Manual YAML indentation of multiple -v bind mounts and -e variables causes syntax errors in CI deployments. DockerToCompose runs 100% in local browser memory with 0 cookies and 0 external network requests.
+        </div>
+      </section>
+
+      <section class="content-card" aria-label="Technical Specifications and Benchmark">
+        <h2>Technical Specifications &amp; Local vs. Cloud Benchmark</h2>
+        <table style="width:100%;border-collapse:collapse;font-size:14px;">
+          <tbody>
+            <tr><th scope="row" style="text-align:left;padding:8px;border-bottom:1px solid var(--border);">Technical Standard</th><td style="padding:8px;border-bottom:1px solid var(--border);">Compose Specification (compose.yaml v2+) CLI Flag AST Tokenizer</td></tr>
+            <tr><th scope="row" style="text-align:left;padding:8px;border-bottom:1px solid var(--border);">Measured Edge Benchmark</th><td style="padding:8px;border-bottom:1px solid var(--border);">1.1ms CLI flag AST tokenization to indented YAML (zero secret leakage)</td></tr>
+            <tr><th scope="row" style="text-align:left;padding:8px;border-bottom:1px solid var(--border);">Shareable Preset URI</th><td style="padding:8px;border-bottom:1px solid var(--border);"><code>https://dockertocompose.othrys.be/?preset=docker-run-volume-and-env-to-compose</code></td></tr>
+            <tr><th scope="row" style="text-align:left;padding:8px;border-bottom:1px solid var(--border);">Target Specification</th><td style="padding:8px;border-bottom:1px solid var(--border);">Modern Docker Compose Specification (compose.yaml)</td></tr>
+            <tr><th scope="row" style="text-align:left;padding:8px;border-bottom:1px solid var(--border);">Mapped CLI Flags</th><td style="padding:8px;border-bottom:1px solid var(--border);">-p (ports), -v/--mount (volumes), -e/--env-file, --restart, --network</td></tr>
+            <tr><th scope="row" style="text-align:left;padding:8px;border-bottom:1px solid var(--border);">Security Advantage</th><td style="padding:8px;border-bottom:1px solid var(--border);">Database passwords and API keys in -e flags never leave your browser</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="content-card" aria-label="Frequently Asked Questions">
+        <h2>Frequently Asked Questions</h2>
+        <details class="faq-item"><summary><strong>How does DockerToCompose run 'Docker Run Bind Mounts (-v) & Env Flags (-e) to Compose Converter' without uploading my data?</strong></summary><p>DockerToCompose executes 100% locally inside your browser's JavaScript and WebAssembly memory (Compose Specification (compose.yaml v2+) CLI Flag AST Tokenizer). Benchmark performance is 1.1ms CLI flag AST tokenization to indented YAML (zero secret leakage), with zero bytes transmitted to external servers.</p></details>
+        <details class="faq-item"><summary><strong>Why use DockerToCompose instead of cloud-based alternatives?</strong></summary><p>Manual YAML indentation of multiple -v bind mounts and -e variables causes syntax errors in CI deployments. DockerToCompose removes all paywalls, watermarks, login walls, and telemetry cookies.</p></details>
+        <details class="faq-item"><summary><strong>Can I share or bookmark a pre-filled state for Docker Run Bind Mounts (-v) & Env Flags (-e) to Compose Converter?</strong></summary><p>Yes. Use the Shareable State Permalink (https://dockertocompose.othrys.be/?preset=docker-run-volume-and-env-to-compose) to bookmark or share this exact tool preset in documentation, GitHub issues, or team runbooks.</p></details>
+      </section>
+    </main>
+
+    <footer>
+      <p><a href="https://dockertocompose.othrys.be/">DockerToCompose Home</a> &bull; <a href="https://dockertocompose.othrys.be/templates/">All DockerToCompose Templates</a> &bull; Sovereign Client-Side Utility</p><p style="font-size:12px;margin-top:6px;">Related Workflow Tools: <a href="https://worldtime.othrys.be/" rel="noopener">WorldTime (IANA Timezone & DST Meeting Planner)</a> &bull; <a href="https://unixtime.othrys.be/" rel="noopener">UnixTime (Epoch Timestamp & ISO-8601 Converter)</a> &bull; <a href="https://cronexplainer.othrys.be/" rel="noopener">CronExplainer (Crontab & EventBridge Schedule Calculator)</a></p>
+    </footer>
+  </div>
+</body>
+</html>

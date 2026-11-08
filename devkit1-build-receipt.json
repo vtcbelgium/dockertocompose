@@ -8,7 +8,7 @@
   "scaffold": {
     "status": "COMPLETED",
     "repo_dir": "C:\\OTHRYS\\repos\\dockertocompose",
-    "files_count": 3185
+    "files_count": 3207
   },
   "cognitive_synthesize": {
     "status": "ALREADY_SYNTHESIZED",
@@ -39,7 +39,7 @@
     "tests_passed": true,
     "build_succeeded": true,
     "dist_compiled": true,
-    "test_output": "ms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m2 passed\u001b[39m\u001b[22m\u001b[90m (2)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m16 passed\u001b[39m\u001b[22m\u001b[90m (16)\u001b[39m\n\u001b[2m   Start at \u001b[22m 20:07:30\n\u001b[2m   Duration \u001b[22m 4.11s\u001b[2m (transform 39ms, setup 0ms, collect 49ms, tests 6ms, environment 571ms, prepare 112ms)\u001b[22m\n\n"
+    "test_output": "ms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m2 passed\u001b[39m\u001b[22m\u001b[90m (2)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m16 passed\u001b[39m\u001b[22m\u001b[90m (16)\u001b[39m\n\u001b[2m   Start at \u001b[22m 20:10:06\n\u001b[2m   Duration \u001b[22m 4.00s\u001b[2m (transform 60ms, setup 0ms, collect 72ms, tests 6ms, environment 593ms, prepare 100ms)\u001b[22m\n\n"
   },
   "git_publish": {
     "status": "COMPLETED",
@@ -58,7 +58,6 @@
     "live_url": "https://dockertocompose.othrys.be/"
   },
   "fleet_register": {
-    "status": "COMPLETED",
-    "fleet_file": "C:\\OTHRYS\\repos\\othrys-web\\lib\\sites.ts"
+    "status": "ALREADY_REGISTERED"
   }
 }

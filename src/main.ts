@@ -102,8 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
   try {
     const params = new URLSearchParams(window.location.search);
     const queryVal = params.get('q') || params.get('cron') || params.get('preset') || params.get('input') || params.get('pattern') || params.get('dialect') || params.get('mode');
-    if (queryVal && input) {
-      input.value = queryVal;
+    if (queryVal && inputEl) {
+      inputEl.value = queryVal;
       processBtn.click();
     }
   } catch (e) {
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
       shareBtn.textContent = '🔗 Share Link';
       shareBtn.style.marginLeft = '8px';
       shareBtn.addEventListener('click', async () => {
-        const val = input.value.trim();
+        const val = inputEl.value.trim();
         const url = new URL(window.location.origin + window.location.pathname);
         if (val) {
           url.searchParams.set('q', val);

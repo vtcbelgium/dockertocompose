@@ -39,7 +39,7 @@
     "tests_passed": true,
     "build_succeeded": true,
     "dist_compiled": true,
-    "test_output": "ms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m2 passed\u001b[39m\u001b[22m\u001b[90m (2)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m16 passed\u001b[39m\u001b[22m\u001b[90m (16)\u001b[39m\n\u001b[2m   Start at \u001b[22m 20:14:45\n\u001b[2m   Duration \u001b[22m 4.27s\u001b[2m (transform 66ms, setup 0ms, collect 76ms, tests 6ms, environment 553ms, prepare 103ms)\u001b[22m\n\n"
+    "test_output": "mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m2 passed\u001b[39m\u001b[22m\u001b[90m (2)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m16 passed\u001b[39m\u001b[22m\u001b[90m (16)\u001b[39m\n\u001b[2m   Start at \u001b[22m 20:53:23\n\u001b[2m   Duration \u001b[22m 4.20s\u001b[2m (transform 41ms, setup 0ms, collect 64ms, tests 7ms, environment 589ms, prepare 99ms)\u001b[22m\n\n"
   },
   "git_publish": {
     "status": "COMPLETED",
@@ -47,9 +47,9 @@
     "gh_authenticated": true
   },
   "cloudflare_deploy": {
-    "status": "FAILED",
-    "pages_host": "dockertocompose.pages.dev",
-    "deployed": false
+    "status": "COMPLETED",
+    "pages_host": "71542d74.dockertocompose.pages.dev",
+    "deployed": true
   },
   "dns_domain": {
     "status": "COMPLETED",

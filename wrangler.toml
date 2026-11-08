@@ -1,0 +1,7 @@
+name = "dockertocompose"
+compatibility_date = "2026-11-01"
+pages_build_output_dir = "dist"
+
+[vars]
+ENVIRONMENT = "production"
+SITE_NAME = "Docker Run to Docker Compose Converter"

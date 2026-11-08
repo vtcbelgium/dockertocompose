@@ -1,0 +1,17 @@
+{
+  "blueprint": {
+    "status": "COMPLETED",
+    "registered": true,
+    "blueprint_path": "C:\\OTHRYS\\repos\\OTHRYS\\blueprints\\sites\\dockertocompose.json",
+    "siteId": "dockertocompose"
+  },
+  "scaffold": {
+    "status": "COMPLETED",
+    "repo_dir": "C:\\OTHRYS\\repos\\dockertocompose",
+    "files_count": 17
+  },
+  "cognitive_synthesize": {
+    "status": "ERROR",
+    "error": "SYNTHESIS_FAILED_CLOSED: Cognitive self-healing loop exhausted 6 attempts. Last error:\nJSON parse error: Expecting value: line 1 column 1 (char 0)"
+  }
+}

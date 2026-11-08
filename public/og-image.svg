@@ -1,0 +1,23 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="40" y="40" width="1120" height="550" rx="24" fill="none" stroke="#334155" stroke-width="2"/>
+  <circle cx="100" cy="110" r="16" fill="url(#glow)"/>
+  <text x="130" y="118" font-family="-apple-system, sans-serif" font-size="28" font-weight="bold" fill="#f8fafc">OTHRYS SOVEREIGN FLEET</text>
+  <rect x="940" y="86" width="180" height="42" rx="21" fill="rgba(56, 189, 248, 0.15)" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="1030" y="113" font-family="-apple-system, sans-serif" font-size="16" font-weight="700" fill="#38bdf8" text-anchor="middle">SOVEREIGN</text>
+  <text x="100" y="270" font-family="-apple-system, sans-serif" font-size="64" font-weight="900" fill="#ffffff" letter-spacing="-1">Docker Run to Docker Compose Converter</text>
+  <text x="100" y="340" font-family="-apple-system, sans-serif" font-size="26" font-weight="400" fill="#94a3b8">Fast, private client-side converter that transforms docker run CLI commands into</text>
+  <line x1="100" y1="420" x2="1100" y2="420" stroke="#1e293b" stroke-width="2"/>
+  <text x="100" y="480" font-family="-apple-system, sans-serif" font-size="20" font-weight="600" fill="#38bdf8">&#x26A1; 100% Client-Side &#x2022; Zero Server Telemetry &#x2022; WCAG AA Compliant</text>
+  <text x="1100" y="480" font-family="-apple-system, sans-serif" font-size="20" font-weight="600" fill="#64748b" text-anchor="end">https://dockertocompose.othrys.be</text>
+</svg>

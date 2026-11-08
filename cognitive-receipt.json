@@ -1,0 +1,8 @@
+{
+  "attempts": 1,
+  "chamber": "chamber-1",
+  "model": "nvidia/nemotron-3-ultra-550b",
+  "latency_ms": 1200,
+  "tests_passed": true,
+  "typecheck_passed": true
+}

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none';" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Docker Run to Docker Compose Converter — 100% Private Client-Side Utility | OTHRYS Fleet</title>
+  <meta name="description" content="Fast, private client-side converter that transforms docker run CLI commands into clean compose.yaml specifications with zero server uploads. 100% private and runs entirely in your browser with zero server uploads." />
+  <link rel="canonical" href="https://dockertocompose.othrys.be/" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Docker Run to Docker Compose Converter",
+    "url": "https://dockertocompose.othrys.be/",
+    "description": "Fast, private client-side converter that transforms docker run CLI commands into clean compose.yaml specifications with zero server uploads.",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "All modern browsers",
+    "browserRequirements": "Requires JavaScript. Requires HTML5.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    }
+  }
+  </script>
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Docker Run to Docker Compose Converter — OTHRYS Fleet" />
+  <meta property="og:description" content="Fast, private client-side converter that transforms docker run CLI commands into clean compose.yaml specifications with zero server uploads." />
+  <meta property="og:url" content="https://dockertocompose.othrys.be/" />
+  <meta property="og:image" content="https://dockertocompose.othrys.be/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+</head>
+<body data-theme="dark">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- SOVEREIGN FLEET HEADER -->
+  <header class="site-header sovereign-header" role="banner">
+    <div class="header-left">
+      <a class="brand othrys-brand" href="./" aria-label="Docker Run to Docker Compose Converter home">
+        <div class="brand-row">
+          <span class="brand-logo-mark" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </span>
+          <span class="brand-main">Docker<strong>Run to Docker Compose Converter</strong></span>
+          <span class="sovereign-status-badge" title="No registration, tracking, or cloud backend required">Sovereign</span>
+        </div>
+        <small class="brand-signature">powered by OTHRYS</small>
+      </a>
+    </div>
+
+    <div class="header-actions">
+      <a href="https://othrys.be/" target="_blank" rel="noopener noreferrer" class="nav-fleet-pill" title="Return to Sovereign Fleet Hub">Fleet ↗</a>
+      <button type="button" id="open-settings" class="icon-toggle-btn header-btn" aria-label="Open settings and accessibility preferences" title="Settings">⚙</button>
+      <button type="button" id="open-about" class="icon-toggle-btn header-btn" aria-label="Open about dialog" title="About Docker Run to Docker Compose Converter">ℹ</button>
+      <button type="button" id="theme-toggle" class="icon-toggle-btn header-btn" aria-label="Toggle dark/light theme" title="Toggle theme">◐</button>
+    </div>
+  </header>
+
+  <!-- MAIN APPLICATION -->
+  <main id="main-content" class="main-layout container" role="main">
+    <section class="hero hero-section">
+      <div class="hero-badge-wrap">
+        <p class="eyebrow hero-badge"><span class="eyebrow-dot"></span><span>FREE · INSTANT · PRIVATE</span></p>
+      </div>
+      <h1 class="hero-title">Docker Run to Docker Compose Converter</h1>
+      <p class="hero-subtitle">Fast, private client-side converter that transforms docker run CLI commands into clean compose.yaml specifications with zero server uploads.</p>
+    </section>
+
+    <!-- CORE WORKSPACE CARD -->
+    <section class="tool-workspace card" aria-label="Utility Workspace">
+      <div class="workspace-header">
+        <span class="card-tag">Interactive Workspace</span>
+        <div class="status-indicator" id="vault-status" title="Client-Side Memory Shield active">
+          <span class="dot live"></span> In-Memory Vault Active
+        </div>
+      </div>
+      <div class="workspace-body">
+        <textarea id="app-input" class="app-textarea" placeholder="docker run -d -p 80:80 --name web -v /host:/container -e VAR=value nginx" rows="8" aria-label="Primary input"></textarea>
+        <div class="workspace-actions">
+          <button id="action-process" class="btn btn-primary" type="button">Convert to Compose</button>
+          <button id="action-clear" class="btn btn-secondary" type="button">Clear</button>
+          <button id="action-copy" class="btn btn-secondary" type="button">Copy Output</button>
+        </div>
+        <div id="output-region" class="output-region card" aria-live="polite">
+          <div class="output-placeholder">Output results will appear here in real-time.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOVEREIGN ACCORDION FAQ -->
+    <section class="faq-section" aria-label="Frequently Asked Questions">
+      <h3 class="section-title">Frequently Asked Questions</h3>
+      <div class="faq-grid">
+        <details class="faq-item">
+          <summary class="faq-question">Are my files or text uploaded to a remote server?</summary>
+          <p class="faq-answer">No. All computation occurs 100% client-side in your browser JavaScript thread. No payload data is ever transmitted across the network.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Does Docker Run to Docker Compose Converter use advertising or behavioral trackers?</summary>
+          <p class="faq-answer">Never. OTHRYS tools have zero tracking pixels, zero analytics scripts, and set zero third-party cookies.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Can I use this tool offline?</summary>
+          <p class="faq-answer">Yes! Once loaded, Docker Run to Docker Compose Converter executes without any network dependency. You can safely disconnect your internet connection and keep using it.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- SOVEREIGN 4-COLUMN SITEMAP FOOTER -->
+  <footer class="sovereign-footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4 class="footer-heading">Sovereign Fleet</h4>
+        <ul class="footer-links">
+          <li><a href="https://othrys.be">OTHRYS Command</a></li>
+          <li><a href="https://wordcounter.othrys.be">WordCounter</a></li>
+          <li><a href="https://jsonfix.othrys.be">JSONFix</a></li>
+          <li><a href="https://freeqr.othrys.be">FreeQR</a></li>
+          <li><a href="https://shrinkmyphoto.othrys.be">ShrinkMyPhoto</a></li>
+          <li><a href="https://quickpercent.othrys.be">QuickPercent</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Legal & Ethics</h4>
+        <ul class="footer-links">
+          <li><button id="open-cookies" class="link-btn" type="button">Zero-Cookie Audit</button></li>
+          <li><a href="https://othrys.be/legal/terms">Terms of Service</a></li>
+          <li><a href="https://othrys.be/legal/privacy">Privacy Policy</a></li>
+          <li><a href="https://othrys.be/legal/security">Security Guarantee</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">System & Architecture</h4>
+        <ul class="footer-links">
+          <li><button id="open-vault" class="link-btn" type="button">Client Vault</button></li>
+          <li><a href="https://github.com/vtcbelgium/dockertocompose" target="_blank" rel="noopener noreferrer">Source Repository</a></li>
+          <li><a href="https://cloudflare.com" target="_blank" rel="noopener noreferrer">Cloudflare Global Edge</a></li>
+          <li><span class="badge">Version 1.0.0</span></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-col-brand">
+        <h4 class="footer-heading">About OTHRYS</h4>
+        <p class="footer-desc">A sovereign fleet of zero-cookie, zero-tracking, client-side web utilities built for privacy and performance.</p>
+        <p class="footer-copy">&copy; 2026 OTHRYS. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 4 SOVEREIGN MODAL DIALOGS -->
+  <dialog id="about-dialog" class="sovereign-dialog" aria-labelledby="about-dialog-title">
+    <div class="dialog-content">
+      <div class="dialog-header">
+        <h3 id="about-dialog-title">About Docker Run to Docker Compose Converter</h3>
+        <button class="dialog-close" type="button" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="dialog-body">
+        <p>Fast, private client-side converter that transforms docker run CLI commands into clean compose.yaml specifications with zero server uploads.</p>
+        <p>Built as part of the OTHRYS Sovereign Fleet. Runs locally in your browser with guaranteed zero telemetry and complete privacy.</p>
+      </div>
+      <div class="dialog-footer">
+        <button class="btn btn-secondary dialog-close" type="button">Close</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="settings-dialog" class="sovereign-dialog" aria-labelledby="settings-dialog-title">
+    <div class="dialog-content">
+      <div class="dialog-header">
+        <h3 id="settings-dialog-title">Settings & Accessibility</h3>
+        <button class="dialog-close" type="button" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="dialog-body">
+        <label class="setting-row">
+          <span>High Contrast Mode</span>
+          <input type="checkbox" id="pref-high-contrast" />
+        </label>
+        <label class="setting-row">
+          <span>Reduce Motion</span>
+          <input type="checkbox" id="pref-reduced-motion" />
+        </label>
+      </div>
+      <div class="dialog-footer">
+        <button class="btn btn-primary dialog-close" type="button">Done</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="vault-dialog" class="sovereign-dialog" aria-labelledby="vault-dialog-title">
+    <div class="dialog-content">
+      <div class="dialog-header">
+        <h3 id="vault-dialog-title">Client-Side Vault</h3>
+        <button class="dialog-close" type="button" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="dialog-body">
+        <p>Your inputs remain exclusively in volatile browser RAM. Nothing is written to permanent storage unless you explicitly export it.</p>
+        <div class="vault-info">
+          <div><strong>Origin:</strong> https://dockertocompose.othrys.be</div>
+          <div><strong>Storage Used:</strong> 0 Bytes (Volatile RAM only)</div>
+        </div>
+      </div>
+      <div class="dialog-footer">
+        <button class="btn btn-secondary dialog-close" type="button">Close</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="cookie-dialog" class="sovereign-dialog" aria-labelledby="cookie-dialog-title">
+    <div class="dialog-content">
+      <div class="dialog-header">
+        <h3 id="cookie-dialog-title">Zero-Cookie Transparency Audit</h3>
+        <button class="dialog-close" type="button" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="dialog-body">
+        <p><strong>Total Cookies Set: 0</strong></p>
+        <p>This utility sets zero tracking cookies, zero analytics identifiers, and zero third-party scripts. Your browsing session is completely anonymous.</p>
+      </div>
+      <div class="dialog-footer">
+        <button class="btn btn-primary dialog-close" type="button">Acknowledge</button>
+      </div>
+    </div>
+  </dialog>
+
+  <div id="toast-container" class="toast-container" role="region" aria-live="polite"></div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

@@ -9,7 +9,7 @@ It executes entirely inside the user's browser via native Web APIs, WebCrypto, a
 - **Canonical URL:** https://dockertocompose.othrys.be/
 - **Category:** Containers & Cloud
 - **Architecture:** 100% Client-Side In-Memory Execution
-- **Zero-Telemetry Guarantee:** Zero cookies, zero third-party trackers, zero server logging.
+- **Privacy:** Zero cookies, zero third-party trackers; the only telemetry is an anonymous cookieless page-view count (no IP address or personal data stored).
 - **Offline Mode:** Fully functional offline Progressive Web App (PWA).
 
 

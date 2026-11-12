@@ -12,6 +12,8 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -35,10 +37,13 @@ jobs:
         run: npm run build
 
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
+        if: env.CF_API_TOKEN != ''
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: dockertocompose
-          directory: dist
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          accountId: 8731d11f0dd513e9305c584846d8ceef
+          command: pages deploy dist --project-name=dockertocompose --branch=main
+
+      - name: Skip deploy (no Cloudflare token)
+        if: env.CF_API_TOKEN == ''
+        run: echo "::warning::CLOUDFLARE_API_TOKEN secret is not set; build and tests passed but nothing was deployed"

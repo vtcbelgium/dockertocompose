@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none';" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' https://stats.othrys.be; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none';" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <title>Docker Run to Docker Compose Converter — 100% Private Client-Side Utility | OTHRYS Fleet</title>
   <meta name="description" content="Fast, private client-side converter that transforms docker run CLI commands into clean compose.yaml specifications with zero server uploads. 100% private and runs entirely in your browser with zero server uploads." />
@@ -88,7 +88,7 @@
         "name": "Does Docker Run to Docker Compose Converter use advertising or behavioral trackers?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Never. OTHRYS tools have zero tracking pixels, zero analytics scripts, and set zero third-party cookies."
+          "text": "Your input never leaves your browser. OTHRYS tools set no cookies and use no tracking pixels or third-party scripts; they only send an anonymous page-view count (no IP address or personal data stored)."
         }
       },
       {
@@ -119,7 +119,7 @@
             </svg>
           </span>
           <span class="brand-main">Docker<strong>Run to Docker Compose Converter</strong></span>
-          <span class="sovereign-status-badge" title="No registration, tracking, or cloud backend required">Sovereign</span>
+          <span class="sovereign-status-badge" title="No registration or cloud backend required">Sovereign</span>
         </div>
         <small class="brand-signature">powered by OTHRYS</small>
       </a>
@@ -174,7 +174,7 @@
         </details>
         <details class="faq-item">
           <summary class="faq-question">Does Docker Run to Docker Compose Converter use advertising or behavioral trackers?</summary>
-          <p class="faq-answer">Never. OTHRYS tools have zero tracking pixels, zero analytics scripts, and set zero third-party cookies.</p>
+          <p class="faq-answer">Your input never leaves your browser. OTHRYS tools set no cookies and use no tracking pixels or third-party scripts; they only send an anonymous page-view count (no IP address or personal data stored).</p>
         </details>
         <details class="faq-item">
           <summary class="faq-question">Can I use this tool offline?</summary>
@@ -234,7 +234,7 @@
       </div>
       <div class="dialog-body">
         <p>Fast, private client-side converter that transforms docker run CLI commands into clean compose.yaml specifications with zero server uploads.</p>
-        <p>Built as part of the OTHRYS Sovereign Fleet. Runs locally in your browser with guaranteed zero telemetry and complete privacy.</p>
+        <p>Built as part of the OTHRYS Sovereign Fleet. Runs locally in your browser with your input kept in the browser and only anonymous, cookieless page counts collected.</p>
       </div>
       <div class="dialog-footer">
         <button class="btn btn-secondary dialog-close" type="button">Close</button>
@@ -291,7 +291,7 @@
       </div>
       <div class="dialog-body">
         <p><strong>Total Cookies Set: 0</strong></p>
-        <p>This utility sets zero tracking cookies, zero analytics identifiers, and zero third-party scripts. Your browsing session is completely anonymous.</p>
+        <p>This utility sets no cookies and loads no third-party scripts. It sends one anonymous page-view ping (page path, country and a daily-rotating hash; no IP address or stored identifier), skipped if you send Do Not Track or Global Privacy Control. Data is deleted after 90 days.</p>
       </div>
       <div class="dialog-footer">
         <button class="btn btn-primary dialog-close" type="button">Acknowledge</button>
@@ -323,5 +323,6 @@ if ('serviceWorker' in navigator) {
     <span>Open SQLFormat</span> &rarr;
   </a>
 </div>
+  <script src="/stats.js" defer></script>
 </body>
 </html>

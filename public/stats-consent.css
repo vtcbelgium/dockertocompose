@@ -1,0 +1,23 @@
+/* OTHRYS Themis consent UI. Loaded in a shadow root, isolated from utility CSS. */
+:host { all: initial; }
+.othrys-stats-panel {
+  position: fixed; z-index: 2147483000; bottom: 12px; left: 12px;
+  width: min(460px, calc(100vw - 24px)); box-sizing: border-box;
+  background: #fff; border: 1px solid #374151; border-radius: 10px;
+  color: #111827; box-shadow: 0 8px 30px #0003; padding: 16px;
+  font: 14px/1.5 system-ui, sans-serif;
+}
+.othrys-stats-panel strong { display: block; font-size: 15px; margin-bottom: 6px; }
+.othrys-stats-panel p { margin: 0 0 12px; }
+.othrys-stats-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+.othrys-stats-panel button {
+  cursor: pointer; background: #f3f4f6; color: #111827; border: 1px solid #6b7280;
+  border-radius: 5px; padding: 8px 12px; font: inherit;
+}
+.othrys-stats-panel button:hover { background: #e5e7eb; }
+.othrys-stats-panel button:focus-visible, .othrys-stats-panel a:focus-visible {
+  outline: 3px solid #2563eb; outline-offset: 2px;
+}
+.othrys-stats-panel a { color: #1d4ed8; }
+.othrys-stats-compact { left: auto; right: 12px; width: auto; padding: 5px; }
+.othrys-stats-compact button { font-size: 12px; }

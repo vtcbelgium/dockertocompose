@@ -1,0 +1,7 @@
+Name: Docker Run to Docker Compose Converter
+URL: https://dockertocompose.othrys.be/
+Description: Convert Docker run commands to Docker Compose YAML files
+LLMs-Txt: https://dockertocompose.othrys.be/llms.txt
+Sitemap: https://dockertocompose.othrys.be/sitemap.xml
+Protocol: public-read-only
+Privacy: zero-tracking-cookies, local-browser-execution, zero-cloud-uploads
